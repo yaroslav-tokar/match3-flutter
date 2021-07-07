@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:match3_sandbox/game/ui_components/game_scene.dart';
+import 'package:match3_sandbox/screen/base/base_block.dart';
 import 'package:match3_sandbox/screen/base/base_screen.dart';
 import 'package:match3_sandbox/screen/game/game_screen.dart';
-import 'package:match3_sandbox/screen/home/block.dart';
-import 'package:match3_sandbox/utils/drawable.dart';
 import 'package:match3_sandbox/utils/navigation.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -21,7 +20,6 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Container(
           child: Column(
             children: [
-              Image.asset(imgBlockAir),
               Center(
                 child: ElevatedButton(
                     onPressed: () =>

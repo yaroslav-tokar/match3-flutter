@@ -1,3 +1,7 @@
-const _drawableRoot = 'assets/image/jelly/';
+const _drawableRoot = 'assets/images/';
 
-const imgBlockAir = _drawableRoot + 'block_air_jelly.png';
+const _folderJelly = 'jelly/';
+
+const imgBlockAir = _folderJelly + 'block_air_jelly.png';
+const imgArthropoda = _folderJelly + 'block_arthropoda_jelly.png';
+const imgDemon = _folderJelly + 'block_demon_jelly.png';

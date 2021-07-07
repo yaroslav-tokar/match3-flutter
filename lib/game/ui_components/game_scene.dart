@@ -2,22 +2,10 @@ import 'dart:ui';
 
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
-import 'package:match3_sandbox/utils/color/colors.dart';
-import 'package:match3_sandbox/utils/game_object/game_scene_util.dart';
-import 'package:match3_sandbox/utils/game_object/rect_model_factory.dart';
-import 'package:match3_sandbox/utils/logger.dart';
-import 'package:match3_sandbox/utils/screen_utils.dart';
+import 'package:match3_sandbox/game/ui_components/game_scene_block.dart';
 
 class GameScene extends Game {
-  static Size screenSize = Size(appScreenHeight, appScreenWidth);
-
-  final blockLine = GameSceneUtils.generateLine();
-
-  final _background = RectModelFactory.create(
-    gameSceneBgColor,
-    screenSize.height,
-    screenSize.width,
-  );
+  final _block = GameSceneBloc();
 
   GameScene() {
     init();
@@ -25,31 +13,21 @@ class GameScene extends Game {
 
   void init() async {
     resize(await Flame.util.initialDimensions());
+    await _block.init();
   }
 
   @override
   void render(Canvas canvas) {
-    _drawBg(canvas);
-    _drawBlocks(canvas);
+    _block.render(canvas);
   }
 
   @override
   void update(double t) {
-    Logger.i('update');
+    _block.update(t);
   }
 
   @override
   void resize(Size size) {
-    screenSize = size;
-  }
-
-  _drawBg(Canvas canvas) {
-    canvas.drawRect(_background.body, _background.paint);
-  }
-
-  _drawBlocks(Canvas canvas) {
-    blockLine.forEach((element) {
-      canvas.drawRect(element.blockModel.body, element.blockModel.paint);
-    });
+    _block.updateScreenSize(size);
   }
 }
