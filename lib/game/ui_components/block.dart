@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flame/components/component.dart';
 import 'package:match3_sandbox/game/model/base_game_obj_model.dart';
-import 'package:match3_sandbox/units/logger.dart';
+import 'package:match3_sandbox/utils/logger.dart';
 
 class Block extends Component {
   final RectObjectModel blockModel;

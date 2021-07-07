@@ -2,11 +2,11 @@ import 'dart:ui';
 
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
-import 'package:match3_sandbox/units/game_object/rect_model_factory.dart';
-import 'package:match3_sandbox/units/color/colors.dart';
-import 'package:match3_sandbox/units/game_object/game_scene_util.dart';
-import 'package:match3_sandbox/units/logger.dart';
-import 'package:match3_sandbox/units/screen_utils.dart';
+import 'package:match3_sandbox/utils/color/colors.dart';
+import 'package:match3_sandbox/utils/game_object/game_scene_util.dart';
+import 'package:match3_sandbox/utils/game_object/rect_model_factory.dart';
+import 'package:match3_sandbox/utils/logger.dart';
+import 'package:match3_sandbox/utils/screen_utils.dart';
 
 class GameScene extends Game {
   static Size screenSize = Size(appScreenHeight, appScreenWidth);

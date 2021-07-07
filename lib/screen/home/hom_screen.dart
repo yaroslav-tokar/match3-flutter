@@ -3,7 +3,8 @@ import 'package:match3_sandbox/game/ui_components/game_scene.dart';
 import 'package:match3_sandbox/screen/base/base_screen.dart';
 import 'package:match3_sandbox/screen/game/game_screen.dart';
 import 'package:match3_sandbox/screen/home/block.dart';
-import 'package:match3_sandbox/units/navigation.dart';
+import 'package:match3_sandbox/utils/drawable.dart';
+import 'package:match3_sandbox/utils/navigation.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -20,10 +21,13 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Container(
           child: Column(
             children: [
-              ElevatedButton(
-                  onPressed: () =>
-                      AppNav.i.push(GameScreen(gameScene: GameScene())),
-                  child: Text('Game screen'))
+              Image.asset(imgBlockAir),
+              Center(
+                child: ElevatedButton(
+                    onPressed: () =>
+                        AppNav.i.push(GameScreen(gameScene: GameScene())),
+                    child: Text('Game screen')),
+              )
             ],
           ),
         ),

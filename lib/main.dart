@@ -2,7 +2,7 @@ import 'package:flame/util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:match3_sandbox/screen/home/hom_screen.dart';
-import 'package:match3_sandbox/units/navigation.dart';
+import 'package:match3_sandbox/utils/navigation.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
